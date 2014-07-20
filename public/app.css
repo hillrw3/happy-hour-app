@@ -1,0 +1,54 @@
+* {
+    font-family: Arial;
+}
+
+#wrapper {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+
+
+#map { position:absolute;
+    height:80%;
+    width:50%;
+    margin:auto;
+}
+
+.title {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#to_map {
+    width: 100%;
+    height: 15%;
+    border-radius: 2px;
+    margin-top: 10%;
+    font-size: 1.4em;
+}
+
+#map_script {
+    margin: auto;
+}
+
+#nav_bar {
+    width: 100%;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.nav_buttons {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#to_register {
+    float: right;
+    margin-top: 40%;
+}
+
+dl {
+    margin: 0;
+}
+

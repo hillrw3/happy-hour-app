@@ -17,11 +17,22 @@ class App <Sinatra::Application
                    :consumer_secret => 'd_G_9y--T3Zo3xZBmCHsBAxlHvU',
                    :token           => 'twcpJoSxXdafBrAXUwyJjQ-RWEOEgJcH',
                    :token_secret    => '0P4Q5MUWLRK85lGm0CneI5K01pg')
-
   end
 
   get '/' do
     erb :root
+  end
+
+  get '/map' do
+    erb :map
+  end
+
+  get '/registration' do
+    erb :registration
+  end
+
+  post '/registration' do
+
   end
 
 end
