@@ -36,6 +36,7 @@
     width: 100%;
     text-align: center;
     background-color: lightgray;
+    padding: 3px 0 3px 0;
 }
 
 .nav_buttons {
@@ -52,3 +53,6 @@ dl {
     margin: 0;
 }
 
+#red {color: red;}
+
+#green {color: limegreen;}

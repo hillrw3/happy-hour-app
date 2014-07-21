@@ -12,10 +12,19 @@
   <a class="nav_buttons" href="/categories">Categories</a>
   <a class="nav_buttons" href="/favorites">Favorites</a>
   <a class="nav_buttons" href="/placeholder">Placeholder</a>
-  <a class="nav_buttons" href="/sign_in">Sign In</a>
+  <% if session[:user] == nil %>
+    <a class="nav_buttons" href="/sign_in">Log In</a>
+  <% else %>
+    <a class="nav_buttons" href="/sign_out">Log Out</a>
+  <% end %>
 </div>
 
 <div id="wrapper">
+
+  <% if flash[:notice] || flash[:error_flash] %>
+    <p><div id ='green'><%= flash[:notice] %></div>
+    <div id ='red'><%= flash[:error_flash]%></div></p>
+  <% end %>
 
   <%= yield %>
 
