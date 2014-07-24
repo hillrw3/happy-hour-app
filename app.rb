@@ -91,12 +91,4 @@ class App <Sinatra::Application
     redirect back
   end
 
-  get "/locations" do
-    params = { term: 'bar',limit: 5,}
-    response = @client.search('Denver', params)
-    json_response = response.to_json
-    @locations = JSON.parse(json_response)
-    erb :locations
-  end
-
 end

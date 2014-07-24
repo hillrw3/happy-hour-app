@@ -36,19 +36,26 @@
 #nav_bar {
     width: 100%;
     text-align: center;
-    background-color: lightgray;
+    background-color: steelblue;
     padding: 3px 0 3px 0;
 }
 
 .nav_buttons {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: inline-block;
 }
 
 #to_register {
     float: right;
     display: inline;
-    margin-right: -10%;
+    margin-right: -35%;
+    margin-top: 8px;
+}
+
+#register_link {
+    background-color: white;
+    color: palevioletred;
 }
 
 dl {
@@ -58,3 +65,20 @@ dl {
 #red {color: red;}
 
 #green {color: limegreen;}
+
+a:link, a:visited {
+    display: inline;
+    width: 120px;
+    color: #FFFFFF;
+    background-color: steelblue;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+a:hover, a:active {
+    background-color: darkblue;
+}
+
