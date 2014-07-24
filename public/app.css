@@ -44,6 +44,7 @@
     margin-left: 3%;
     margin-right: 3%;
     display: inline-block;
+
 }
 
 #to_register {
@@ -79,6 +80,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: darkblue;
+    background-color: white;
+    color: steelblue;
 }
 
