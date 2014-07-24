@@ -6,6 +6,8 @@ require "gschool_database_connection"
 require "faraday"
 require "json"
 require_relative "lib/users_table"
+require_relative "lib/locations_test_table"
+require "geocoder"
 
 
 class App <Sinatra::Application
@@ -19,6 +21,9 @@ class App <Sinatra::Application
                    :token           => 'twcpJoSxXdafBrAXUwyJjQ-RWEOEgJcH',
                    :token_secret    => '0P4Q5MUWLRK85lGm0CneI5K01pg')
     @users_table = UsersTable.new(
+      GschoolDatabaseConnection::DatabaseConnection.establish(ENV["RACK_ENV"])
+    )
+    @locations_table = LocationsTable.new(
       GschoolDatabaseConnection::DatabaseConnection.establish(ENV["RACK_ENV"])
     )
   end
@@ -84,6 +89,14 @@ class App <Sinatra::Application
   get '/sign_out' do
     session.clear
     redirect back
+  end
+
+  get "/locations" do
+    params = { term: 'bar',limit: 5,}
+    response = @client.search('Denver', params)
+    json_response = response.to_json
+    @locations = JSON.parse(json_response)
+    erb :locations
   end
 
 end

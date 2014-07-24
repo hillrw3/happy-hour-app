@@ -18,6 +18,7 @@
 .title {
     text-align: center;
     margin-top: 5%;
+    clear: both;
 }
 
 #to_map {
@@ -46,7 +47,8 @@
 
 #to_register {
     float: right;
-    margin-top: 40%;
+    display: inline;
+    margin-right: -10%;
 }
 
 dl {

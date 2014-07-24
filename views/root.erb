@@ -1,12 +1,23 @@
+<% if session[:user] == nil %>
+  <div id="to_register">
+    <a href="/registration">Not a member? Register here!</a>
+  </div>
+<% end %>
+
 <h1 class="title">Happy Hour Finder</h1>
 
-<form action="/map" method="get">
-  <button id="to_map">Get me there</button>
-</form>
+<!--<form action="/maps" method="get">-->
+  <!--<button id="to_map">Get me there!</button>-->
+<!--</form>-->
 
-<div id="to_register">
-  <a href="/registration">Not a member? Register here!</a>
-</div>
+<div id='map'></div>
+  <script id="map_script">
+    var map = L.mapbox.map('map', 'hillrw3.j0aknjmb')
+      .addControl(L.mapbox.geocoderControl('examples.map-i875kd35'));
+
+  </script>
+
+
 
 
 
